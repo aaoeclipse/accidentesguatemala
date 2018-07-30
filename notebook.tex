@@ -721,9 +721,9 @@ dtype: float64
          \PY{k}{def} \PY{n+nf}{g\PYZus{}hora\PYZus{}5}\PY{p}{(}\PY{n}{horaExacta}\PY{p}{)}\PY{p}{:}
              \PY{k}{if} \PY{p}{(}\PY{n}{horaExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{11}\PY{p}{)}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{1}
-             \PY{k}{if} \PY{p}{(}\PY{n}{horaExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{20}\PY{p}{)}\PY{p}{:}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{horaExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{20}\PY{p}{)}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{2}
-             \PY{k}{if} \PY{p}{(}\PY{n}{horaExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{24}\PY{p}{)}\PY{p}{:}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{horaExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{24}\PY{p}{)}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{3}
              \PY{k}{return} \PY{l+m+mi}{4}
          
@@ -836,13 +836,13 @@ dtype: float64
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}16}]:} \PY{k}{def} \PY{n+nf}{g\PYZus{}edad\PYZus{}80}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)}\PY{p}{:}
-             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{15}\PY{p}{)}\PY{p}{:}
-                 \PY{k}{return} \PY{l+m+mi}{1}
-             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{80}\PY{p}{)}\PY{p}{:}
-                 \PY{k}{return} \PY{l+m+mi}{15}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{k}{def} \PY{n+nf}{g\PYZus{}edad\PYZus{}80}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)}\PY{p}{:}    
              \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{)}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{16}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{15}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{1}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{80}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{15}
              \PY{n}{edadExacta} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{p}{(}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)} \PY{o}{/} \PY{l+m+mi}{5}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{)}
              \PY{k}{return} \PY{n}{edadExacta}
          
@@ -1007,11 +1007,11 @@ dtype: float64
          \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
          \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
          
-         \PY{k}{def} \PY{n+nf}{edad\PYZus{}m1}\PY{p}{(}\PY{n}{edad\PYZus{}pil}\PY{p}{)}\PY{p}{:}
-             \PY{k}{if} \PY{p}{(}\PY{n}{edad\PYZus{}pil} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{18}\PY{p}{)}\PY{p}{:}
-                 \PY{k}{return} \PY{l+m+mi}{1}
+         \PY{k}{def} \PY{n+nf}{edad\PYZus{}m1}\PY{p}{(}\PY{n}{edad\PYZus{}pil}\PY{p}{)}\PY{p}{:}    
              \PY{k}{if} \PY{p}{(}\PY{n}{edad\PYZus{}pil} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{)}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{9}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edad\PYZus{}pil} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{18}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{1}
              \PY{k}{return} \PY{l+m+mi}{2}
          
          \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{edad\PYZus{}m1}\PY{p}{)}
@@ -1038,7 +1038,7 @@ dtype: float64
          4         1        15           2           9         14           1   
          
             modelo\_vehi  causa\_acc  year  zona\_ocu  muni\_ocu  marca\_vehi  edad\_m1  
-         0         1988          2  2009        99        -1          -1        1  
+         0         1988          2  2009        99        -1          -1        9  
          1         9999          2  2009        99        -1          -1        2  
          2         9999          4  2009        99        -1          -1        2  
          3         9999          4  2009        99        -1          -1        2  
@@ -1076,7 +1076,7 @@ dtype: float64
          4         1        15           2           9         14           1   
          
             modelo\_vehi  causa\_acc  year  zona\_ocu muni\_ocu  marca\_vehi  edad\_m1  
-         0         1988          2  2009        99       -1          -1        1  
+         0         1988          2  2009        99       -1          -1        9  
          1         9999          2  2009        99       -1          -1        2  
          2         9999          4  2009        99       -1          -1        2  
          3         9999          4  2009        99       -1          -1        2  
@@ -1102,9 +1102,9 @@ dtype: float64
                  \PY{n}{hora\PYZus{}exacta} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{hora\PYZus{}exacta}\PY{p}{)}
                  \PY{k}{if} \PY{p}{(}\PY{n}{hora\PYZus{}exacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{11}\PY{p}{)}\PY{p}{:}
                      \PY{k}{return} \PY{l+m+mi}{1}
-                 \PY{k}{if} \PY{p}{(}\PY{n}{hora\PYZus{}exacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{20}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{elif} \PY{p}{(}\PY{n}{hora\PYZus{}exacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{20}\PY{p}{)}\PY{p}{:}
                      \PY{k}{return} \PY{l+m+mi}{2}
-                 \PY{k}{if} \PY{p}{(}\PY{n}{hora\PYZus{}exacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{24}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{elif} \PY{p}{(}\PY{n}{hora\PYZus{}exacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{24}\PY{p}{)}\PY{p}{:}
                      \PY{k}{return} \PY{l+m+mi}{3}
              \PY{k}{except}\PY{p}{:}
                  \PY{k}{return} \PY{l+m+mi}{99}
@@ -1136,7 +1136,7 @@ dtype: float64
          4         1        15           2   {\ldots}             1         2007          2   
          
             year  zona\_ocu  muni\_ocu  marca\_vehi edad\_m1  g\_edad\_2  g\_hora  
-         0  2009        99        -1          -1       1        -1       1  
+         0  2009        99        -1          -1       9        -1       1  
          1  2009        99        -1          -1       2        -1       2  
          2  2009        99        -1          -1       2        -1       2  
          3  2009        99        -1          -1       2        -1       2  
@@ -1145,6 +1145,648 @@ dtype: float64
          [5 rows x 22 columns]
 \end{Verbatim}
             
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}correlativo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{área\PYZus{}geo\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{areag\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         
+         
+         \PY{k}{def} \PY{n+nf}{g\PYZus{}edad\PYZus{}nuevo}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{16}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{15}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{1}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{80}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{15}
+             
+             \PY{n}{edadExacta} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{p}{(}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)} \PY{o}{/} \PY{l+m+mi}{5}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{)}
+             \PY{k}{return} \PY{n}{edadExacta}
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{g\PYZus{}edad\PYZus{}nuevo}\PY{p}{)}
+         
+         
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corre\PYZus{}base}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}eve}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2013}\PY{p}{,} \PY{n}{car\PYZus{}accidents\PYZus{}2014}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:}    num\_hecho  dia\_ocu  mes\_ocu  dia\_sem\_ocu hora\_ocu  depto\_ocu  areag\_ocu  \textbackslash{}
+         0       1449       13        5            3        1         14          1   
+         1       1587        1        7            1       15         22          2   
+         2        679        1        3            7       17         17          2   
+         3        633       26        2            4       18         21          2   
+         4        673        1        3            7       15         10          1   
+         
+            sexo\_pil  edad\_pil  g\_edad\_pil    {\ldots}     causa\_acc  year  zona\_ocu  \textbackslash{}
+         0         9       999          99    {\ldots}             2  2009        99   
+         1         2        13           2    {\ldots}             2  2009        99   
+         2         1        14           2    {\ldots}             4  2009        99   
+         3         1        15           2    {\ldots}             4  2009        99   
+         4         1        15           2    {\ldots}             2  2009        99   
+         
+            muni\_ocu  marca\_vehi  edad\_m1  g\_edad\_2 g\_hora  corre\_base  tipo\_eve  
+         0        -1          -1        9        -1      1          -1        99  
+         1        -1          -1        2        -1      2          -1        99  
+         2        -1          -1        2        -1      2          -1        99  
+         3        -1          -1        2        -1      2          -1        99  
+         4        -1          -1        2        -1      2          -1        99  
+         
+         [5 rows x 24 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}24}]:}    núm\_corre  año\_ocu  mes\_ocu  día\_ocu  día\_sem\_ocu  hora\_ocu  g\_hora  \textbackslash{}
+         0          1     2015        1        1            4        16       3   
+         1          2     2015        1        1            4        22       4   
+         2          3     2015        1        1            4         2       1   
+         3          4     2015        1        1            4         9       2   
+         4          5     2015        1        1            4         1       1   
+         
+            g\_hora\_5  depto\_ocu  mupio\_ocu  {\ldots}   g\_edad\_60ymás  edad\_quinquenales  \textbackslash{}
+         0         2          1        101  {\ldots}               2                  4   
+         1         3          1        101  {\ldots}               5                  7   
+         2         1          1        101  {\ldots}              12                 18   
+         3         1          1        101  {\ldots}               3                  5   
+         4         1          1        115  {\ldots}               3                  5   
+         
+            estado\_con  tipo\_veh  marca\_veh  color\_veh  modelo\_veh  g\_modelo\_veh  \textbackslash{}
+         0           9         4         21          5        2011             5   
+         1           1         4         21          5        9999             6   
+         2           9         3         44          6        9999             6   
+         3           9         4         40          5        9999             6   
+         4           9         1         34          4        9999             6   
+         
+            tipo\_eve  year  
+         0         1  2015  
+         1         1  2015  
+         2         1  2015  
+         3         2  2015  
+         4         2  2015  
+         
+         [5 rows x 26 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{núm\PYZus{}corre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{área\PYZus{}geo\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{areag\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}60ymás}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corre\PYZus{}base}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         
+         \PY{k}{del} \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{año\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}hora\PYZus{}5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{5}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{6}
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2015} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2014}\PY{p}{,} \PY{n}{car\PYZus{}accidents\PYZus{}2015}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2015}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2015.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2015}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}25}]:}    num\_hecho  dia\_ocu  mes\_ocu  dia\_sem\_ocu hora\_ocu  depto\_ocu  areag\_ocu  \textbackslash{}
+         0       1449       13        5            3        1         14          1   
+         1       1587        1        7            1       15         22          2   
+         2        679        1        3            7       17         17          2   
+         3        633       26        2            4       18         21          2   
+         4        673        1        3            7       15         10          1   
+         
+            sexo\_pil  edad\_pil  g\_edad\_pil        {\ldots}          marca\_vehi  edad\_m1  \textbackslash{}
+         0         9       999          99        {\ldots}                  -1        9   
+         1         2        13           2        {\ldots}                  -1        2   
+         2         1        14           2        {\ldots}                  -1        2   
+         3         1        15           2        {\ldots}                  -1        2   
+         4         1        15           2        {\ldots}                  -1        2   
+         
+            g\_edad\_2  g\_hora  corre\_base  tipo\_eve  g\_hora\_5 g\_modelo\_veh  \textbackslash{}
+         0        -1       1          -1        99         5            6   
+         1        -1       2          -1        99         5            6   
+         2        -1       2          -1        99         5            6   
+         3        -1       2          -1        99         5            6   
+         4        -1       2          -1        99         5            6   
+         
+            g\_edad\_80ymás  edad\_quinquenales  
+         0            NaN                NaN  
+         1            NaN                NaN  
+         2            NaN                NaN  
+         3            NaN                NaN  
+         4            NaN                NaN  
+         
+         [5 rows x 28 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{núm\PYZus{}corre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{área\PYZus{}geo\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{areag\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}60ymás}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corre\PYZus{}base}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{999}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{12}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         
+         \PY{k}{del} \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{año\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2016} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2015}\PY{p}{,} \PY{n}{car\PYZus{}accidents\PYZus{}2016}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2016}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2016.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2016}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}26}]:}    num\_hecho  dia\_ocu  mes\_ocu  dia\_sem\_ocu hora\_ocu  depto\_ocu  areag\_ocu  \textbackslash{}
+         0       1449       13        5            3        1         14          1   
+         1       1587        1        7            1       15         22          2   
+         2        679        1        3            7       17         17          2   
+         3        633       26        2            4       18         21          2   
+         4        673        1        3            7       15         10          1   
+         
+            sexo\_pil  edad\_pil  g\_edad\_pil        {\ldots}          marca\_vehi  edad\_m1  \textbackslash{}
+         0         9       999          99        {\ldots}                  -1        9   
+         1         2        13           2        {\ldots}                  -1        2   
+         2         1        14           2        {\ldots}                  -1        2   
+         3         1        15           2        {\ldots}                  -1        2   
+         4         1        15           2        {\ldots}                  -1        2   
+         
+            g\_edad\_2  g\_hora  corre\_base  tipo\_eve  g\_hora\_5 g\_modelo\_veh  \textbackslash{}
+         0        -1       1          -1        99         5            6   
+         1        -1       2          -1        99         5            6   
+         2        -1       2          -1        99         5            6   
+         3        -1       2          -1        99         5            6   
+         4        -1       2          -1        99         5            6   
+         
+            g\_edad\_80ymás  edad\_quinquenales  
+         0            NaN                NaN  
+         1            NaN                NaN  
+         2            NaN                NaN  
+         3            NaN                NaN  
+         4            NaN                NaN  
+         
+         [5 rows x 28 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{núm\PYZus{}corre}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{área\PYZus{}geo\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{areag\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}60ymás}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}per}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{areag\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corre\PYZus{}base}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{999}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{12}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{9}
+         
+         \PY{k}{del} \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{año\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2016}\PY{p}{,} \PY{n}{car\PYZus{}accidents\PYZus{}2017}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}27}]:}    num\_hecho  dia\_ocu  mes\_ocu  dia\_sem\_ocu hora\_ocu  depto\_ocu  areag\_ocu  \textbackslash{}
+         0       1449       13        5            3        1         14          1   
+         1       1587        1        7            1       15         22          2   
+         2        679        1        3            7       17         17          2   
+         3        633       26        2            4       18         21          2   
+         4        673        1        3            7       15         10          1   
+         
+            sexo\_pil  edad\_pil  g\_edad\_pil        {\ldots}          marca\_vehi  edad\_m1  \textbackslash{}
+         0         9       999          99        {\ldots}                  -1        9   
+         1         2        13           2        {\ldots}                  -1        2   
+         2         1        14           2        {\ldots}                  -1        2   
+         3         1        15           2        {\ldots}                  -1        2   
+         4         1        15           2        {\ldots}                  -1        2   
+         
+            g\_edad\_2  g\_hora  corre\_base  tipo\_eve  g\_hora\_5 g\_modelo\_veh  \textbackslash{}
+         0        -1       1          -1        99         5            6   
+         1        -1       2          -1        99         5            6   
+         2        -1       2          -1        99         5            6   
+         3        -1       2          -1        99         5            6   
+         4        -1       2          -1        99         5            6   
+         
+            g\_edad\_80ymás  edad\_quinquenales  
+         0            NaN                NaN  
+         1            NaN                NaN  
+         2            NaN                NaN  
+         3            NaN                NaN  
+         4            NaN                NaN  
+         
+         [5 rows x 28 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{k+kn}{import} \PY{n+nn}{math}
+         \PY{k}{def} \PY{n+nf}{get\PYZus{}edad\PYZus{}quinquenal}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{n}{x} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{18}
+             \PY{k}{elif} \PY{n}{x} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{80}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{17}
+             \PY{k}{return} \PY{n}{math}\PY{o}{.}\PY{n}{floor}\PY{p}{(}\PY{p}{(}\PY{n}{x}\PY{o}{/}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{k}{def} \PY{n+nf}{g\PYZus{}edad\PYZus{}nuevo}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZlt{}} \PY{l+m+mi}{15}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{1}
+             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{80}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{15}
+             \PY{k}{if} \PY{p}{(}\PY{n}{edadExacta} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{16}
+             \PY{n}{edadExacta} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{p}{(}\PY{p}{(}\PY{n}{edadExacta}\PY{p}{)} \PY{o}{/} \PY{l+m+mi}{5}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{)}
+             \PY{k}{return} \PY{n}{edadExacta}
+         
+         \PY{k}{del} \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}80ymás}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}quinquenales}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{get\PYZus{}edad\PYZus{}quinquenal}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{g\PYZus{}edad\PYZus{}nuevo}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{car\PYZus{}accidents\PYZus{}2009\PYZus{}2017}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}28}]:}    num\_hecho  dia\_ocu  mes\_ocu  dia\_sem\_ocu hora\_ocu  depto\_ocu  areag\_ocu  \textbackslash{}
+         0       1449       13        5            3        1         14          1   
+         1       1587        1        7            1       15         22          2   
+         2        679        1        3            7       17         17          2   
+         3        633       26        2            4       18         21          2   
+         4        673        1        3            7       15         10          1   
+         
+            sexo\_pil  edad\_pil  g\_edad\_pil   {\ldots}    marca\_vehi  edad\_m1  g\_edad\_2  \textbackslash{}
+         0         9       999          99   {\ldots}            -1        9        -1   
+         1         2        13           2   {\ldots}            -1        2        -1   
+         2         1        14           2   {\ldots}            -1        2        -1   
+         3         1        15           2   {\ldots}            -1        2        -1   
+         4         1        15           2   {\ldots}            -1        2        -1   
+         
+            g\_hora  corre\_base  tipo\_eve  g\_hora\_5 g\_modelo\_veh  edad\_quinquenales  \textbackslash{}
+         0       1          -1        99         5            6                 18   
+         1       2          -1        99         5            6                  3   
+         2       2          -1        99         5            6                  3   
+         3       2          -1        99         5            6                  4   
+         4       2          -1        99         5            6                  4   
+         
+            g\_edad  
+         0      15  
+         1       1  
+         2       1  
+         3       2  
+         4       2  
+         
+         [5 rows x 28 columns]
+\end{Verbatim}
+            
+    \hypertarget{vehiculos}{%
+\section{Vehiculos}\label{vehiculos}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{vehicles\PYZus{}2010} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2010.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2012} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2012.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2013.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2014.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2015} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2015.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2016} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2016.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2017} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{VI2017.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2010}
+         \PY{n}{vehicles\PYZus{}2012}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2012}
+         \PY{n}{vehicles\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2013}
+         \PY{n}{vehicles\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2014}
+         \PY{n}{vehicles\PYZus{}2015}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2015}
+         \PY{n}{vehicles\PYZus{}2016}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2016}
+         \PY{n}{vehicles\PYZus{}2017}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{year}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{2017}
+\end{Verbatim}
+
+
+    \hypertarget{vehicles-2010}{%
+\subsection{Vehicles 2010}\label{vehicles-2010}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}ac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}v}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}v}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}v}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{condic\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         
+         \PY{k}{def} \PY{n+nf}{edad\PYZus{}m1}\PY{p}{(}\PY{n}{edad\PYZus{}pil}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{p}{(}\PY{n}{edad\PYZus{}pil} \PY{o}{==} \PY{l+m+mi}{999}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{9}
+             \PY{k}{elif} \PY{p}{(}\PY{n}{edad\PYZus{}pil} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{18}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+m+mi}{1}    
+             \PY{k}{return} \PY{l+m+mi}{2}
+         
+         \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{vehicles\PYZus{}2010}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{n}{edad\PYZus{}m1}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{vehicles\PYZus{}2010.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}31}]:}    dia\_ocu  mes\_ocu  dia\_sem\_ocu  hora\_ocu  depto\_ocu  areag\_ocu  zona\_ocu  \textbackslash{}
+         0       31        1            7        15          2          2        99   
+         1       29       11            1        22          9          2        99   
+         2        6       12            1         7         13          2        99   
+         3        8        8            7        17         16          2        99   
+         4        9        1            6        20          2          2        99   
+         
+            sexo\_pil  edad\_pil  estado\_pil  tipo\_vehi  color\_vehi  modelo\_vehi  \textbackslash{}
+         0         9       999           9          5           2         9999   
+         1         1        37           1          5           7         9999   
+         2         1        55           1          5          99         9999   
+         3         1        35           1          3           3         9999   
+         4         1        24           9          4           4         9999   
+         
+            causa\_acc  year  muni\_ocu  num\_hecho  g\_edad\_pil  edad\_m1  
+         0          3  2010        -1         -1          -1        9  
+         1          3  2010        -1         -1          -1        1  
+         2          4  2010        -1         -1          -1        1  
+         3          1  2010        -1         -1          -1        1  
+         4          1  2010        -1         -1          -1        1  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}32}]:}    num\_vehí  dia\_ocu  mes\_ocu  dia\_sem\_ocu  hora\_ocu  depto\_ocu  mupio\_ocu  \textbackslash{}
+         0         1        1        1            7        12          1        101   
+         1         2        1        1            7        12          1        101   
+         2         3        1        1            7        17          1        101   
+         3         4        1        1            7        17          1        101   
+         4         5        1        1            7        10          1        102   
+         
+            areag\_ocu  zona\_ocu  sexo\_pil  edad\_pil  g\_edad\_pil  edad\_m1  condic\_pil  \textbackslash{}
+         0          1         3         1        40           7        1           1   
+         1          1         3         1        65          10        1           1   
+         2          1        18         1        44           7        1           2   
+         3          1        18         1       999          11        1           1   
+         4          2        99         1        52           9        1           1   
+         
+            tipo\_vehi  color\_vehi  modelo\_vehi  causa\_acc  year  
+         0          1           6         1999          1  2012  
+         1          1           1         1997          1  2012  
+         2          1           2         9999          1  2012  
+         3          3           5         9999          1  2012  
+         4          3           4         9999          2  2012  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}vehí}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}ac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{condic\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         
+         
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2012} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{vehicles\PYZus{}2010}\PY{p}{,} \PY{n}{vehicles\PYZus{}2012}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2012}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{vehicles\PYZus{}2010\PYZus{}2012.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2012}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}33}]:}    dia\_ocu  mes\_ocu  dia\_sem\_ocu  hora\_ocu  depto\_ocu  areag\_ocu  zona\_ocu  \textbackslash{}
+         0       31        1            7        15          2          2        99   
+         1       29       11            1        22          9          2        99   
+         2        6       12            1         7         13          2        99   
+         3        8        8            7        17         16          2        99   
+         4        9        1            6        20          2          2        99   
+         
+            sexo\_pil  edad\_pil  estado\_pil  tipo\_vehi  color\_vehi  modelo\_vehi  \textbackslash{}
+         0         9       999           9          5           2         9999   
+         1         1        37           1          5           7         9999   
+         2         1        55           1          5          99         9999   
+         3         1        35           1          3           3         9999   
+         4         1        24           9          4           4         9999   
+         
+            causa\_acc  year  muni\_ocu  num\_hecho  g\_edad\_pil  edad\_m1  
+         0          3  2010        -1         -1          -1        9  
+         1          3  2010        -1         -1          -1        1  
+         2          4  2010        -1         -1          -1        1  
+         3          1  2010        -1         -1          -1        1  
+         4          1  2010        -1         -1          -1        1  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}vehí}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}ac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{condic\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2013}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2012}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{marca\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99} 
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2012}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grupo\PYZus{}mode\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{6}
+         
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{vehicles\PYZus{}2010\PYZus{}2012}\PY{p}{,} \PY{n}{vehicles\PYZus{}2013}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{o}{.}\PY{n}{to\PYZus{}csv}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{vehicles\PYZus{}2010\PYZus{}2013.csv}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{sep}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{,}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}34}]:}    dia\_ocu  mes\_ocu  dia\_sem\_ocu  hora\_ocu  depto\_ocu  areag\_ocu  zona\_ocu  \textbackslash{}
+         0       31        1            7        15          2          2        99   
+         1       29       11            1        22          9          2        99   
+         2        6       12            1         7         13          2        99   
+         3        8        8            7        17         16          2        99   
+         4        9        1            6        20          2          2        99   
+         
+            sexo\_pil  edad\_pil  estado\_pil       {\ldots}        color\_vehi  modelo\_vehi  \textbackslash{}
+         0         9       999           9       {\ldots}                 2         9999   
+         1         1        37           1       {\ldots}                 7         9999   
+         2         1        55           1       {\ldots}                99         9999   
+         3         1        35           1       {\ldots}                 3         9999   
+         4         1        24           9       {\ldots}                 4         9999   
+         
+            causa\_acc  year  muni\_ocu  num\_hecho  g\_edad\_pil  edad\_m1  marca\_veh  \textbackslash{}
+         0          3  2010        -1         -1          -1        9         99   
+         1          3  2010        -1         -1          -1        1         99   
+         2          4  2010        -1         -1          -1        1         99   
+         3          1  2010        -1         -1          -1        1         99   
+         4          1  2010        -1         -1          -1        1         99   
+         
+            grupo\_mode\_veh  
+         0               6  
+         1               6  
+         2               6  
+         3               6  
+         4               6  
+         
+         [5 rows x 21 columns]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}correlativo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{num\PYZus{}hecho}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}ac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{causa\PYZus{}acc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{color\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{modelo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}vehi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{estado\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mupio\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{muni\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mayor\PYZus{}menor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}m1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{área\PYZus{}geo\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{día\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dia\PYZus{}sem\PYZus{}ocu}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{edad\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{rename}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}con}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sexo\PYZus{}pil}\PY{l+s+s1}{\PYZsq{}}\PY{p}{\PYZcb{}}\PY{p}{,} \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{vehicles\PYZus{}2014}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{grupo\PYZus{}mode\PYZus{}veh}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{6}
+         
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g\PYZus{}hora}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1} 
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{corre\PYZus{}base}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{tipo\PYZus{}eve}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{99}
+         
+         \PY{n}{vehicles\PYZus{}2014}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+         \PY{n}{vehicles\PYZus{}2010\PYZus{}2014} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{vehicles\PYZus{}2010\PYZus{}2013}\PY{p}{,} \PY{n}{vehicles\PYZus{}2014}\PY{p}{]}\PY{p}{,} \PY{n}{sort}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} vehicles\PYZus{}2010\PYZus{}2014.to\PYZus{}csv(\PYZsq{}vehicles\PYZus{}2010\PYZus{}2014.csv\PYZsq{}, sep=\PYZsq{},\PYZsq{})}
+         \PY{c+c1}{\PYZsh{} vehicles\PYZus{}2010\PYZus{}2014.head()}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+        ---------------------------------------------------------------------------
+
+        ValueError                                Traceback (most recent call last)
+
+        <ipython-input-35-90035e65809f> in <module>()
+         21 vehicles\_2014.head()
+         22 vehicles\_2010\_2013.head()
+    ---> 23 vehicles\_2010\_2014 = pd.concat([vehicles\_2010\_2013, vehicles\_2014], sort=False)
+         24 \# vehicles\_2010\_2014.to\_csv('vehicles\_2010\_2014.csv', sep=',')
+         25 \# vehicles\_2010\_2014.head()
+
+
+        \textasciitilde{}/Development/datascience/accidentesguatemala/venv/lib/python3.6/site-packages/pandas/core/reshape/concat.py in concat(objs, axis, join, join\_axes, ignore\_index, keys, levels, names, verify\_integrity, sort, copy)
+        224                        verify\_integrity=verify\_integrity,
+        225                        copy=copy, sort=sort)
+    --> 226     return op.get\_result()
+        227 
+        228 
+
+
+        \textasciitilde{}/Development/datascience/accidentesguatemala/venv/lib/python3.6/site-packages/pandas/core/reshape/concat.py in get\_result(self)
+        421             new\_data = concatenate\_block\_managers(
+        422                 mgrs\_indexers, self.new\_axes, concat\_axis=self.axis,
+    --> 423                 copy=self.copy)
+        424             if not self.copy:
+        425                 new\_data.\_consolidate\_inplace()
+
+
+        \textasciitilde{}/Development/datascience/accidentesguatemala/venv/lib/python3.6/site-packages/pandas/core/internals.py in concatenate\_block\_managers(mgrs\_indexers, axes, concat\_axis, copy)
+       5404     blocks = []
+       5405 
+    -> 5406     for placement, join\_units in concat\_plan:
+       5407 
+       5408         if len(join\_units) == 1 and not join\_units[0].indexers:
+
+
+        \textasciitilde{}/Development/datascience/accidentesguatemala/venv/lib/python3.6/site-packages/pandas/core/internals.py in combine\_concat\_plans(plans, concat\_axis)
+       5697         while num\_ended[0] != len(next\_items):
+       5698             if num\_ended[0] > 0:
+    -> 5699                 raise ValueError("Plan shapes are not aligned")
+       5700 
+       5701             placements, units = zip(*next\_items)
+
+
+        ValueError: Plan shapes are not aligned
+
+    \end{Verbatim}
+
 
     % Add a bibliography block to the postdoc
     
